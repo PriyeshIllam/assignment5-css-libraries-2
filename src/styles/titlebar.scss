@@ -1,0 +1,21 @@
+@import './variables';
+@import './mixins';
+
+.title-bar {
+  @include flex-center;
+  padding: $padding;
+  background-color: $primary-color;
+  color: $text-color;
+  @include box-shadow(0, 2px, 4px, rgba(0, 0, 0, 0.1));
+
+  .logo {
+    width: $logo-size;
+    height: $logo-size;
+    margin-right: 15px;
+  }
+
+  .title {
+    font-size: $font-size-title;
+    margin: 0;
+  }
+}

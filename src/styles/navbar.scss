@@ -1,0 +1,43 @@
+@import './variables';
+@import './mixins';
+
+.nav-bar {
+  background-color: darken($primary-color, 5%);
+  padding: 0.5rem 1.5rem;
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: left;
+
+    li {
+      a {
+        color: $text-color;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 0;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // 🔽 On small screens, force one item per row
+  @media (max-width: 600px) {
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .nav-links li {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
