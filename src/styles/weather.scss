@@ -67,6 +67,37 @@
     }
   }
 
+  .city-search {
+  max-width: 400px;
+  margin: 1rem auto;
+  text-align: center;
+
+  input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .city-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 0.5rem;
+      cursor: pointer;
+      border-radius: 6px;
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+}
+
+
   @media (max-width: 768px) {
     padding: 1.5rem;
 
