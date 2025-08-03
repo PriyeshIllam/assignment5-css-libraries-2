@@ -1,7 +1,7 @@
 // src/pages/Home.tsx
 import React, { useEffect, useState } from 'react';
 import WeatherCard from '../components/WeatherCard';
-import CitySearch from '../components/citySearch';
+import CitySearch from '../components/CitySearch';
 
 const API_KEY = '4bd7eda4e7f353114375baf342234412'; // Replace with your OpenWeather API key
 

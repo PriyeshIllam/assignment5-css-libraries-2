@@ -22,7 +22,7 @@
   .local-time {
     font-size: 1rem;
     text-align: center;
-    color: darken($text-color, 80%);
+    color: lighten($text-color, 20%);
     margin-bottom: 1.5rem;
   }
 
