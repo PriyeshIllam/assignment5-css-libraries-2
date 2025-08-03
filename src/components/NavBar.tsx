@@ -8,7 +8,6 @@ const NavBar: React.FC = () => {
     <nav className="nav-bar">
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/forecast">Forecast</Link></li>
         <li><Link to="/about">About</Link></li>
       </ul>
     </nav>
