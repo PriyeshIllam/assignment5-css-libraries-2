@@ -3,11 +3,15 @@ import React, { useEffect, useState } from 'react';
 import WeatherCard from '../components/WeatherCard';
 import CitySearch from '../components/CitySearch';
 
-const API_KEY = '4bd7eda4e7f353114375baf342234412'; // Replace with your OpenWeather API key
+const API_KEY = '4bd7eda4e7f353114375baf342234412';
+const LOCAL_STORAGE_KEY = 'lastSelectedCity';
 
 const Home: React.FC = () => {
   const [weatherData, setWeatherData] = useState<any>(null);
-  const [selectedCity, setSelectedCity] = useState<string>('Stockholm');
+  const [selectedCity, setSelectedCity] = useState<string>(() => {
+    // Load city from localStorage on first render
+    return localStorage.getItem(LOCAL_STORAGE_KEY) || 'Stockholm';
+  });
   const [error, setError] = useState<string | null>(null);
 
   const fetchWeather = async (city: string) => {
@@ -27,8 +31,10 @@ const Home: React.FC = () => {
     }
   };
 
+  // When city changes, fetch weather and save to localStorage
   useEffect(() => {
     fetchWeather(selectedCity);
+    localStorage.setItem(LOCAL_STORAGE_KEY, selectedCity);
   }, [selectedCity]);
 
   return (
