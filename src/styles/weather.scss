@@ -22,7 +22,7 @@
   .local-time {
     font-size: 1rem;
     text-align: center;
-    color: darken($text-color, 80%);
+    color: lighten($text-color, 20%);
     margin-bottom: 1.5rem;
   }
 
@@ -66,6 +66,37 @@
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
   }
+
+  .city-search {
+  max-width: 400px;
+  margin: 1rem auto;
+  text-align: center;
+
+  input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .city-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 0.5rem;
+      cursor: pointer;
+      border-radius: 6px;
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+}
+
 
   @media (max-width: 768px) {
     padding: 1.5rem;
